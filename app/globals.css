@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* glass effect card */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #ff8bd1, #7dd3fc, #a78bfa, #f472b6, #c7d2fe);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.star-field {
+  background-image:
+    radial-gradient(1px 1px at 25px 5px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 50px 25px, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 125px 15px, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 175px 45px, rgba(255,255,255,0.3), transparent);
+  background-size: 200px 200px;
+  animation: drift 30s linear infinite;
+}
+
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 200px 200px; }
+}
